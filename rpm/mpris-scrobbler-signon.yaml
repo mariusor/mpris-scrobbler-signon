@@ -1,0 +1,53 @@
+Name: mpris-scrobbler-signon
+Summary: MPRIS Scrobbler Signon
+Version: 0.1
+Release: 1
+# The contents of the Group field should be one of the groups listed here:
+# https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
+Group: Qt/Qt
+URL: http://github.com/mariusor/mpris-scrobbler
+License: MIT
+# This must be generated before uploading a package to a remote build service.
+# Usually this line does not need to be modified.
+Sources:
+- '%{name}-%{version}.tar.bz2'
+Description: |
+  Signon helper for the mpris-scrobbler service.
+
+Configure: none
+
+# The qtc5 builder inserts macros to allow QtCreator to have fine
+# control over qmake/make execution
+Builder: qtc5
+
+# This section specifies build dependencies that are resolved using pkgconfig.
+# This is the preferred way of specifying build dependencies for your package.
+PkgConfigBR:
+  - sailfishapp >= 1.0.2
+  - Qt5Core
+  - Qt5Qml
+  - Qt5Quick
+
+# Build dependencies without a pkgconfig setup can be listed here
+# PkgBR:
+#   - package-needed-to-build
+
+# Runtime dependencies which are not automatically detected
+Requires:
+  - sailfishsilica-qt5 >= 0.10.9 
+  - jolla-settings-accounts >= 0.2.27
+
+
+# All installed files
+Files:
+#  - '%{_bindir}'
+#  - '%{_datadir}/%{name}'
+#  - '%{_datadir}/icons/hicolor/scalable/*.svg'
+  - '%{_datadir}/accounts/providers/mpris-scrobbler-service.provider'
+#  - '%{_datadir}/accounts/services/mpris-scrobbler-lastfm.service'
+#  - '%{_datadir}/accounts/services/mpris-scrobbler-librefm.service'
+  - '%{_datadir}/accounts/services/mpris-scrobbler-listenbrainz.service'
+
+# For more information about yaml and what's supported in Sailfish OS
+# build system, please see https://wiki.merproject.org/wiki/Spectacle
+
