@@ -43,10 +43,10 @@ mkdir -p %{buildroot}%{_datadir}/accounts
 mkdir -p %{buildroot}%{_datadir}/accounts/providers
 mkdir -p %{buildroot}%{_datadir}/accounts/services
 
-install -m 644 src/mpris-scrobbler-service.provider %{buildroot}%{_datadir}/accounts/providers
-install -m 644 src/mpris-scrobbler-librefm.service %{buildroot}%{_datadir}/accounts/services
-install -m 644 src/mpris-scrobbler-lastfm.service %{buildroot}%{_datadir}/accounts/services
-install -m 644 src/mpris-scrobbler-listenbrainz.service %{buildroot}%{_datadir}/accounts/services
+install -m 644 accounts/providers/mpris-scrobbler-service.provider %{buildroot}%{_datadir}/accounts/providers
+install -m 644 accounts/services/mpris-scrobbler-librefm.service %{buildroot}%{_datadir}/accounts/services
+install -m 644 accounts/services/mpris-scrobbler-lastfm.service %{buildroot}%{_datadir}/accounts/services
+install -m 644 accounts/services/mpris-scrobbler-listenbrainz.service %{buildroot}%{_datadir}/accounts/services
 # << build pre
 
 %qtc_qmake5 

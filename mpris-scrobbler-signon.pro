@@ -21,11 +21,11 @@ DISTFILES += qml/mpris-scrobbler-signon.qml \
     rpm/mpris-scrobbler-signon.changes.run.in \
     rpm/mpris-scrobbler-signon.spec \
     rpm/mpris-scrobbler-signon.yaml \
-#    translations/*.ts \
-    src/mpris-scrobbler-service.provider \
-    src/mpris-scrobbler-lastfm.service \
-    src/mpris-scrobbler-librefm.service \
-    src/mpris-scrobbler-listenbrainz.service
+    translations/*.ts \
+    accounts/providers/mpris-scrobbler-service.provider \
+    accounts/services/mpris-scrobbler-lastfm.service \
+    accounts/services/mpris-scrobbler-librefm.service \
+    accounts/services/mpris-scrobbler-listenbrainz.service
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 scalable
 
