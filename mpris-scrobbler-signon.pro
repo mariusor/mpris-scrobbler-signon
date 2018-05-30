@@ -22,10 +22,10 @@ DISTFILES += qml/mpris-scrobbler-signon.qml \
     rpm/mpris-scrobbler-signon.spec \
     rpm/mpris-scrobbler-signon.yaml \
     translations/*.ts \
-    accounts/providers/mpris-scrobbler-service.provider \
-    accounts/services/mpris-scrobbler-lastfm.service \
-    accounts/services/mpris-scrobbler-librefm.service \
-    accounts/services/mpris-scrobbler-listenbrainz.service
+    providers/mpris-scrobbler-service.provider \
+    services/mpris-scrobbler-lastfm.service \
+    services/mpris-scrobbler-librefm.service \
+    services/mpris-scrobbler-listenbrainz.service
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 scalable
 
@@ -38,4 +38,4 @@ CONFIG += sailfishapp_i18n jolla-settings-accounts
 # planning to localize your app, remember to comment out the
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
-#TRANSLATIONS += translations/mpris-scrobbler-signon-de.ts
+TRANSLATIONS += translations/mpris-scrobbler-signon-de.ts
