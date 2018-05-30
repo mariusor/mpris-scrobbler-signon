@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE service>
 <service version="1.0" id="mpris-scrobbler-librefm">
-    <type>IM</type>
+    <type>sharing</type>
     <provider>mpris-scrobbler</provider>
     <name>Libre.fm Scrobbler</name>
     <description>MPRIS Scrobbler libre.fm account service</description>
@@ -13,8 +13,10 @@
             <setting name="mechanism">web_server</setting>
             <group name="oauth2">
                 <group name="web_server">
-                    <setting name="Host"></setting>
-                    <setting name="AuthPath"></setting>
+                    <setting name="Host">https://libre.fm</setting>
+                    <setting name="AuthPath">/api/auth</setting>
+                    <setting name="APIKey">299dead99beef992</setting>
+                    <setting name="APISecret">c0ffee1511fe</setting>
                 </group>
             </group>
         </group>

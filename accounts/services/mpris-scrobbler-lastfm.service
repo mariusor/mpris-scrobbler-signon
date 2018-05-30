@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE service>
 <service id="mpris-scrobbler-lastfm">
-    <type>IM</type>
+    <type>sharing</type>
     <provider>mpris-scrobbler</provider>
     <name>Last.fm scrobbler</name>
     <description>MPRIS Scrobbler last.fm account provider</description>
@@ -13,8 +13,10 @@
             <setting name="mechanism">web_server</setting>
             <group name="oauth2">
                 <group name="web_server">
-                    <setting name="Host"></setting>
-                    <setting name="AuthPath"></setting>
+                    <setting name="Host">https://www.last.fm</setting>
+                    <setting name="AuthPath">/api/auth</setting>
+                    <setting name="APIKey">990909c4e451d6c1ee3df4f5ee87e6f4</setting>
+                    <setting name="APISecret">8bde8774564ef206edd9ef9722742a72</setting>
                 </group>
             </group>
         </group>
