@@ -1,0 +1,5 @@
+mpris-scrobbler-signon
+Makefile
+*.list
+*.o
+*.user
