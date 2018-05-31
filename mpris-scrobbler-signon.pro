@@ -16,16 +16,16 @@ CONFIG += sailfishapp
 
 SOURCES += src/mpris-scrobbler-signon.cpp
 
-DISTFILES += qml/mpris-scrobbler-signon.qml \
+DISTFILES += ui/scrobbler.qml \
     rpm/mpris-scrobbler-signon.changes.in \
     rpm/mpris-scrobbler-signon.changes.run.in \
     rpm/mpris-scrobbler-signon.spec \
     rpm/mpris-scrobbler-signon.yaml \
     translations/*.ts \
-    providers/mpris-scrobbler-service.provider \
-    services/mpris-scrobbler-lastfm.service \
-    services/mpris-scrobbler-librefm.service \
-    services/mpris-scrobbler-listenbrainz.service
+    providers/scrobbler-service.provider \
+    services/scrobbler-lastfm.service \
+    services/scrobbler-librefm.service \
+    services/scrobbler-listenbrainz.service
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172 scalable
 

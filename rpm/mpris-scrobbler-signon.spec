@@ -43,9 +43,11 @@ Signon helper for the mpris-scrobbler service.
 mkdir -p %{buildroot}%{_datadir}/accounts
 mkdir -p %{buildroot}%{_datadir}/accounts/providers
 mkdir -p %{buildroot}%{_datadir}/accounts/services
+mkdir -p %{buildroot}%{_datadir}/accounts/ui
 
-install -m 644 providers/mpris-scrobbler-service.provider %{buildroot}%{_datadir}/accounts/providers
-install -m 644 services/mpris-scrobbler-listenbrainz.service %{buildroot}%{_datadir}/accounts/services
+install -m 644 providers/scrobbler.provider %{buildroot}%{_datadir}/accounts/providers
+install -m 644 services/scrobbler-listenbrainz.service %{buildroot}%{_datadir}/accounts/services
+install -m 644 ui/scrobbler.qml %{buildroot}%{_datadir}/accounts/ui
 #install -m 644 services/mpris-scrobbler-librefm.service %{buildroot}%{_datadir}/accounts/services
 #install -m 644 services/mpris-scrobbler-lastfm.service %{buildroot}%{_datadir}/accounts/services
 # << build pre
@@ -69,7 +71,8 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %{_datadir}/icons/hicolor/scalable/apps/*.svg
-%{_datadir}/accounts/providers/mpris-scrobbler-service.provider
-%{_datadir}/accounts/services/mpris-scrobbler-listenbrainz.service
+%{_datadir}/accounts/providers/scrobbler-service.provider
+%{_datadir}/accounts/services/scrobbler-listenbrainz.service
+%{_datadir}/accounts/ui/scrobbler.qml
 # >> files
 # << files
