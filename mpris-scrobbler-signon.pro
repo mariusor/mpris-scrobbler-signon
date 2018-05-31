@@ -22,7 +22,7 @@ DISTFILES += rpm/mpris-scrobbler-signon.changes.in \
     rpm/mpris-scrobbler-signon.yaml \
     translations/*.ts \
     ui/scrobbler.qml \
-    providers/scrobbler-service.provider \
+    providers/scrobbler.provider \
     services/scrobbler-lastfm.service \
     services/scrobbler-librefm.service \
     services/scrobbler-listenbrainz.service
