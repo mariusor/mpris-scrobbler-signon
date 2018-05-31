@@ -40,13 +40,12 @@ Requires:
 
 # All installed files
 Files:
-#  - '%{_bindir}'
-#  - '%{_datadir}/%{name}'
   - '%{_datadir}/icons/hicolor/scalable/apps/*.svg'
-  - '%{_datadir}/accounts/providers/mpris-scrobbler-service.provider'
-  - '%{_datadir}/accounts/services/mpris-scrobbler-listenbrainz.service'
-#  - '%{_datadir}/accounts/services/mpris-scrobbler-lastfm.service'
-#  - '%{_datadir}/accounts/services/mpris-scrobbler-librefm.service'
+  - '%{_datadir}/accounts/ui/scrobbler.ui'
+  - '%{_datadir}/accounts/providers/scrobbler.provider'
+  - '%{_datadir}/accounts/services/scrobbler-listenbrainz.service'
+#  - '%{_datadir}/accounts/services/scrobbler-lastfm.service'
+#  - '%{_datadir}/accounts/services/scrobbler-librefm.service'
 
 # For more information about yaml and what's supported in Sailfish OS
 # build system, please see https://wiki.merproject.org/wiki/Spectacle

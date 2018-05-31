@@ -16,12 +16,12 @@ CONFIG += sailfishapp
 
 SOURCES += src/mpris-scrobbler-signon.cpp
 
-DISTFILES += ui/scrobbler.qml \
-    rpm/mpris-scrobbler-signon.changes.in \
+DISTFILES += rpm/mpris-scrobbler-signon.changes.in \
     rpm/mpris-scrobbler-signon.changes.run.in \
     rpm/mpris-scrobbler-signon.spec \
     rpm/mpris-scrobbler-signon.yaml \
     translations/*.ts \
+    ui/scrobbler.qml \
     providers/scrobbler-service.provider \
     services/scrobbler-lastfm.service \
     services/scrobbler-librefm.service \
