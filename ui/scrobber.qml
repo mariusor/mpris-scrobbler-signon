@@ -29,7 +29,7 @@ AccountSettingsAgent {
 
             PageHeader {
                 id: header
-                title: root.accountsHeaderText
+                title: "test title"
             }
 
             VerticalScrollDecorator {}
