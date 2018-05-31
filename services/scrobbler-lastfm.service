@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE service>
-<service id="mpris-scrobbler-lastfm">
+<service id="scrobbler-lastfm">
     <type>sharing</type>
-    <provider>mpris-scrobbler</provider>
+    <provider>scrobbler</provider>
     <name>Last.fm scrobbler</name>
-    <description>MPRIS Scrobbler last.fm account provider</description>
-    <icon>image://theme/icon-m-service-mpris-scrobbler-lastfm</icon>
+    <description>Scrobbler last.fm account service</description>
+    <icon>image://theme/icon-m-service-scrobbler-lastfm</icon>
     <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/mpris-scrobbler-lastfm.png</icon> -->
     <template>
         <group name="auth">
