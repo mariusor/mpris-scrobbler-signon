@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE provider>
+<provider version="1.0" id="scrobbler-lastfm">
+    <type>sharing</type>
+    <name>Last.fm</name>
+    <description>Last.fm account provider</description>
+    <icon>image://theme/icon-m-service-scrobbler-lastfm</icon>
+    <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/scrobbler-lastfm.png</icon> -->
+    <template>
+        <group name="auth">
+            <setting name="method">token</setting>
+            <group name="token">
+                <setting name="APIKey">8L6O_eyMFyUWVW0SxWllqg</setting>
+                <setting name="APISecret">2OWfXf0r06ubXtZPxYTWBQ</setting>
+            </group>
+        </group>
+    </template>
+</provider>

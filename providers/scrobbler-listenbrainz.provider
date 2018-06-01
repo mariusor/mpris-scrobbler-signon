@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<service version="1.0" id="scrobbler-listenbrainz">
+<!DOCTYPE provider>
+<provider version="1.0" id="scrobbler-listenbrainz">
     <type>sharing</type>
-    <provider>scrobbler</provider>
-    <name>ListenBrainz.org scrobbler</name>
-    <description>Scrobbler listenbrainz.org account service</description>
+    <name>Listenbrainz</name>
+    <description>Listenbrainz account provider</description>
     <icon>image://theme/icon-m-service-scrobbler-listenbrainz</icon>
-    <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/mpris-scrobbler-listenbrainz.png</icon> -->
+    <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/scrobbler-listenbrainz.png</icon> -->
     <template>
         <group name="auth">
             <setting name="method">token</setting>
@@ -15,4 +15,4 @@
             </group>
         </group>
     </template>
-</service>
+</provider>

@@ -45,9 +45,9 @@ mkdir -p %{buildroot}%{_datadir}/accounts/providers
 mkdir -p %{buildroot}%{_datadir}/accounts/services
 mkdir -p %{buildroot}%{_datadir}/accounts/ui
 
-install -m 644 providers/scrobbler.provider %{buildroot}%{_datadir}/accounts/providers
-install -m 644 services/scrobbler-listenbrainz.service %{buildroot}%{_datadir}/accounts/services
-install -m 644 ui/scrobbler.qml %{buildroot}%{_datadir}/accounts/ui
+install -m 644 providers/*.provider %{buildroot}%{_datadir}/accounts/providers
+install -m 644 services/*.service %{buildroot}%{_datadir}/accounts/services
+install -m 644 ui/*.qml %{buildroot}%{_datadir}/accounts/ui
 #install -m 644 services/mpris-scrobbler-librefm.service %{buildroot}%{_datadir}/accounts/services
 #install -m 644 services/mpris-scrobbler-lastfm.service %{buildroot}%{_datadir}/accounts/services
 # << build pre
@@ -71,8 +71,8 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %{_datadir}/icons/hicolor/scalable/apps/*.svg
-%{_datadir}/accounts/providers/scrobbler-service.provider
-%{_datadir}/accounts/services/scrobbler-listenbrainz.service
-%{_datadir}/accounts/ui/scrobbler.qml
+%{_datadir}/accounts/providers/*.provider
+%{_datadir}/accounts/services/*.service
+%{_datadir}/accounts/ui/*.qml
 # >> files
 # << files

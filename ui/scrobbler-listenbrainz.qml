@@ -30,7 +30,7 @@ AccountCreationAgent {
 
             PageHeader {
                 id: header
-                title: "test title"
+                title: "Listenbrainz.org"
             }
 
             VerticalScrollDecorator {}
