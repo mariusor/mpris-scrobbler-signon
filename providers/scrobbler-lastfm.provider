@@ -5,7 +5,7 @@
     <name>Last.fm</name>
     <description>Last.fm account provider</description>
     <icon>image://theme/icon-m-service-scrobbler-lastfm</icon>
-    <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/scrobbler-lastfm.png</icon> -->
+    <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/lastfm.png</icon> -->
     <template>
         <group name="auth">
             <setting name="method">token</setting>

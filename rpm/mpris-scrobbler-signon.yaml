@@ -34,13 +34,13 @@ PkgConfigBR:
 
 # Runtime dependencies which are not automatically detected
 Requires:
-  - sailfishsilica-qt5 >= 0.10.9 
+  - sailfishsilica-qt5 >= 0.10.9
   - jolla-settings-accounts >= 0.2.27
 
 # All installed files
 Files:
-  - '%{_datadir}/icons/hicolor/scalable/apps/*.svg'
-  - '%{_datadir}/accounts/ui/*.ui'
+  - '%{_datadir}/icons/hicolor/*/apps/*'
+  - '%{_datadir}/accounts/ui/*.qml'
   - '%{_datadir}/accounts/providers/*.provider'
   - '%{_datadir}/accounts/services/*.service'
 

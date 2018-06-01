@@ -5,7 +5,7 @@
     <name>ListenBrainz.org scrobbler</name>
     <description>Scrobbler listenbrainz.org account service</description>
     <icon>image://theme/icon-m-service-scrobbler-listenbrainz</icon>
-    <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/mpris-scrobbler-listenbrainz.png</icon> -->
+    <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/listenbrainz.png</icon> -->
     <template>
         <group name="auth">
             <setting name="method">token</setting>
