@@ -18,7 +18,8 @@ Configure: none
 
 # The qtc5 builder inserts macros to allow QtCreator to have fine
 # control over qmake/make execution
-Builder: qtc5
+#Builder: qtc5
+Builder: none
 
 # This section specifies build dependencies that are resolved using pkgconfig.
 # This is the preferred way of specifying build dependencies for your package.
@@ -39,11 +40,28 @@ Requires:
 
 # All installed files
 Files:
-  - '%{_datadir}/icons/hicolor/*/apps/*'
+#  - '%{_bindir}/%{name}'
   - '%{_datadir}/accounts/ui/*.qml'
-  - '%{_datadir}/accounts/providers/*.provider'
-  - '%{_datadir}/accounts/services/*.service'
+  - '%{_datadir}/accounts/providers/scrobbler-lastfm.provider'
+  - '%{_datadir}/accounts/providers/scrobbler-librefm.provider'
+  - '%{_datadir}/accounts/providers/scrobbler-listenbrainz.provider'
+#  - '%{_datadir}/accounts/services/*'
+  - '%{_datadir}/icons/hicolor/86x86/apps/lastfm.png'
+  - '%{_datadir}/icons/hicolor/86x86/apps/librefm.png'
+  - '%{_datadir}/icons/hicolor/86x86/apps/listenbrainz.png'
+  - '%{_datadir}/icons/hicolor/108x108/apps/lastfm.png'
+  - '%{_datadir}/icons/hicolor/108x108/apps/librefm.png'
+  - '%{_datadir}/icons/hicolor/108x108/apps/listenbrainz.png'
+  - '%{_datadir}/icons/hicolor/128x128/apps/lastfm.png'
+  - '%{_datadir}/icons/hicolor/128x128/apps/librefm.png'
+  - '%{_datadir}/icons/hicolor/128x128/apps/listenbrainz.png'
+  - '%{_datadir}/icons/hicolor/172x172/apps/lastfm.png'
+  - '%{_datadir}/icons/hicolor/172x172/apps/librefm.png'
+  - '%{_datadir}/icons/hicolor/172x172/apps/listenbrainz.png'
+  - '%{_datadir}/icons/hicolor/scalable/apps/lastfm.svg'
+  - '%{_datadir}/icons/hicolor/scalable/apps/librefm.svg'
+  - '%{_datadir}/icons/hicolor/scalable/apps/listenbrainz.svg'
+  - '%{_datadir}/icons/hicolor/scalable/apps/musicbrainz.svg'
 
 # For more information about yaml and what's supported in Sailfish OS
 # build system, please see https://wiki.merproject.org/wiki/Spectacle
-

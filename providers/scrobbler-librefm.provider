@@ -4,8 +4,7 @@
     <type>sharing</type>
     <name>Libre.fm</name>
     <description>Libre.fm account provider</description>
-    <icon>image://theme/icon-m-service-scrobbler-librefm</icon>
-    <!-- <icon>file:///usr/share/pixmaps/icons/hicolor/86x86/apps/librefm.png</icon> -->
+    <icon>image://theme/librefm</icon>
     <template>
         <group name="auth">
             <setting name="method">oauth2</setting>

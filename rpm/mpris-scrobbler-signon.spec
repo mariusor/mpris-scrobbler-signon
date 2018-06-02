@@ -8,10 +8,6 @@ Name:       mpris-scrobbler-signon
 # >> macros
 # << macros
 
-%{!?qtc_qmake:%define qtc_qmake %qmake}
-%{!?qtc_qmake5:%define qtc_qmake5 %qmake5}
-%{!?qtc_make:%define qtc_make make}
-%{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    MPRIS Scrobbler Signon
 Version:    0.1
 Release:    1
@@ -39,21 +35,9 @@ Signon helper for the mpris-scrobbler service.
 
 %build
 # >> build pre
-
-mkdir -p %{buildroot}%{_datadir}/accounts
-mkdir -p %{buildroot}%{_datadir}/accounts/providers
-mkdir -p %{buildroot}%{_datadir}/accounts/services
-mkdir -p %{buildroot}%{_datadir}/accounts/ui
-
-install -m 644 icons/* %{buildroot}%{_datadir}/icons/hicolor/
-install -m 644 providers/*.provider %{buildroot}%{_datadir}/accounts/providers
-install -m 644 services/*.service %{buildroot}%{_datadir}/accounts/services
-install -m 644 ui/*.qml %{buildroot}%{_datadir}/accounts/ui
 # << build pre
 
-%qtc_qmake5 
 
-%qtc_make %{?_smp_mflags}
 
 # >> build post
 # << build post
@@ -62,16 +46,49 @@ install -m 644 ui/*.qml %{buildroot}%{_datadir}/accounts/ui
 rm -rf %{buildroot}
 # >> install pre
 # << install pre
-%qmake5_install
 
 # >> install post
+mkdir -p %{buildroot}%{_datadir}/accounts
+mkdir -p %{buildroot}%{_datadir}/accounts/providers
+mkdir -p %{buildroot}%{_datadir}/accounts/ui
+mkdir -p %{buildroot}%{_datadir}/icons/hicolor/86x86/apps
+mkdir -p %{buildroot}%{_datadir}/icons/hicolor/108x108/apps
+mkdir -p %{buildroot}%{_datadir}/icons/hicolor/128x128/apps
+mkdir -p %{buildroot}%{_datadir}/icons/hicolor/172x172/apps
+mkdir -p %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
+#mkdir -p %{buildroot}%{_datadir}/accounts/services
+
+install -m 644 icons/86x86/*.png %{buildroot}%{_datadir}/icons/hicolor/86x86/apps
+install -m 644 icons/108x108/*.png %{buildroot}%{_datadir}/icons/hicolor/108x108/apps
+install -m 644 icons/128x128/*.png %{buildroot}%{_datadir}/icons/hicolor/128x128/apps
+install -m 644 icons/172x172/*.png %{buildroot}%{_datadir}/icons/hicolor/172x172/apps
+install -m 644 icons/scalable/*.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
+install -m 644 providers/*.provider %{buildroot}%{_datadir}/accounts/providers
+install -m 644 ui/*.qml %{buildroot}%{_datadir}/accounts/ui
+#install -m 644 services/*.service %{buildroot}%{_datadir}/accounts/services
 # << install post
 
 %files
 %defattr(-,root,root,-)
-%{_datadir}/icons/hicolor/*/apps/*
-%{_datadir}/accounts/providers/*.provider
-%{_datadir}/accounts/services/*.service
 %{_datadir}/accounts/ui/*.qml
+%{_datadir}/accounts/providers/scrobbler-lastfm.provider
+%{_datadir}/accounts/providers/scrobbler-librefm.provider
+%{_datadir}/accounts/providers/scrobbler-listenbrainz.provider
+%{_datadir}/icons/hicolor/86x86/apps/lastfm.png
+%{_datadir}/icons/hicolor/86x86/apps/librefm.png
+%{_datadir}/icons/hicolor/86x86/apps/listenbrainz.png
+%{_datadir}/icons/hicolor/108x108/apps/lastfm.png
+%{_datadir}/icons/hicolor/108x108/apps/librefm.png
+%{_datadir}/icons/hicolor/108x108/apps/listenbrainz.png
+%{_datadir}/icons/hicolor/128x128/apps/lastfm.png
+%{_datadir}/icons/hicolor/128x128/apps/librefm.png
+%{_datadir}/icons/hicolor/128x128/apps/listenbrainz.png
+%{_datadir}/icons/hicolor/172x172/apps/lastfm.png
+%{_datadir}/icons/hicolor/172x172/apps/librefm.png
+%{_datadir}/icons/hicolor/172x172/apps/listenbrainz.png
+%{_datadir}/icons/hicolor/scalable/apps/lastfm.svg
+%{_datadir}/icons/hicolor/scalable/apps/librefm.svg
+%{_datadir}/icons/hicolor/scalable/apps/listenbrainz.svg
+%{_datadir}/icons/hicolor/scalable/apps/musicbrainz.svg
 # >> files
 # << files
